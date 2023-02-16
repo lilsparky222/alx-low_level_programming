@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main(void)
 {
-	/** main point
+	/** 
+	 * main- function for main
 	 *
 	 * retun 0 always
 	 */
