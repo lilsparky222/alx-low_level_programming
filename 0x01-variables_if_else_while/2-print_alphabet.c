@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - main entry for block
+ *main - main entry for block
  *
- * Return alway 0
+ *Return: return alway 0
  */
 int main(void)
 {
