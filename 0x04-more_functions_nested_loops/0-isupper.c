@@ -2,8 +2,7 @@
 
 /**
  * _isupper - define an uppercase
- *
- * Description: Prints the alphabet 
+ * Description:Prints the alphabet
  * @c: charater
  * Return: 0
  */
