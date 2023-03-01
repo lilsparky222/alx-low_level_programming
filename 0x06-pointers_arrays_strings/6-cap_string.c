@@ -1,35 +1,34 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes everey word of a string
- * @s: string to modify
+ * cap_string - capitalizes all words of a string
+ * @str: pointer to string
  *
- * Return: the resulting string
+ * Return: pointer to string
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int x, y;
+	int i, j;
+	char separator[] = {' ', '\t', '\n', ',', ';', '.', '!',
+					'?', '"', '(', ')', '{', '}', '\0'};
 
-	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
-		'!', '?', '"', '(', ')', '{', '}'};
-
-	for (x = 0; s[x] != '\0'; x++)
+	if (str[0] >= 'a' && str[0] <= 'z')
 	{
-		if (x == 0 && s[x] >= 'a' && s[x] <= 'z')
-			s[x] -= 32;
+		str[0] += ('A' - 'a');
+	}
 
-		for (y = 0; y < 13; y++)
+	for (i = 0; separator[i]; i++)
+	{
+		for (j = 0; str[j]; j++)
 		{
-			if (s[x] == spe[y])
+			if (separator[i] == str[j])
 			{
-				if (s[x + 1] >= 'a' && s[x + 1] <= 'z')
+				if (str[j + 1] >= 'a' && str[j + 1] <= 'z')
 				{
-					s[x + 1] -= 32;
+					str[j + 1] += ('A' - 'a');
 				}
 			}
 		}
 	}
-
-	return (s);
+	return (str);
 }
-
