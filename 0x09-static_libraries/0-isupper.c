@@ -3,7 +3,7 @@
  * _isupper - convert to uppercase
  * @c: char character
  *
- * Return: 0 
+ * Return: 0
  */
 int _isupper(int c)
 {
